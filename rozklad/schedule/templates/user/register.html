@@ -1,0 +1,17 @@
+{% extends "layout/basic.html" %}
+
+{% block title %} Реєстрація {% endblock %}
+
+{% block content %}
+<div class="home">
+    <div class="container">
+        <h2 align=center>Реєстрація</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
